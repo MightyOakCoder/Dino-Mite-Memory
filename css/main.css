@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 8px;
+}
+
+.back-red {
+    border: 2px solid #c3c3c3;
+    display: grid;
+    justify-content: center
+    align-items: center
+}
+/* #attributes {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
+}  */
+
+#attributes {
+    box-sizing: content-box;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
+}
+
+.card1 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.card2 {
+    grid-area: 1 / 3 / 2 / 4;
+    }
+
+.card3 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.card4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.card5 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.card6 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.card7 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.card8 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.card9 {
+    grid-area: 3 / 4 / 4 / 5;
+}
+
+.card10 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.card11 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.card12 {
+    grid-area: 4 / 4 / 5 / 5;
+}
