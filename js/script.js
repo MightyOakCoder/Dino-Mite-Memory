@@ -24,6 +24,15 @@ parentEl.addEventListener('click', function(evt) {
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
 })
 
+function flipCard(cardChosen) {
+    if (cardChosen != pictures[0] + pictures[6])
+    setAttribute
+}
+
+
+// If cards match
+//     then they stay up
+//     else they flip over
 // $('.parent div img').on('click', function (evt){
 //     console.log(evt.target.id)
 //     // evt.target.currentSrc = "https://iili.io/HqziLFt.png"
@@ -48,3 +57,17 @@ parentEl.addEventListener('click', function(evt) {
 //     $card1.toggle();
 //   });
 // });
+
+
+
+/*----- constants -----*/
+
+/*----- app's state (variables) -----*/
+ 
+  /*----- cached element references -----*/
+
+  /*----- event listeners -----*/
+  
+  /*----- functions -----*/
+  
+ 
