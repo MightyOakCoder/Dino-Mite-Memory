@@ -1,4 +1,4 @@
-console.log("connected?")//delete later
+console.log("connected!")//delete later
 
 document.querySelector("div")
 .addEventListener("click", handleClick);
@@ -6,3 +6,5 @@ document.querySelector("div")
 function handleClick (evt) {
     console.log(evt)
 }
+
+// const status = 
