@@ -18,21 +18,28 @@ const pictures = [
 
 
 const parentEl = document.querySelector(".parent")
+const timesClicked = 0
 parentEl.addEventListener('click', function(evt) {
     console.log(evt.target.id)
     console.log(pictures[evt.target.id])
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
 })
 
-function flipCard(cardChosen) {
-    if (cardChosen != pictures[0] + pictures[6])
-    setAttribute
-}
-
+function stopCick() {
+    timesClicked++;
+    if (timesClicked > 2) {
+        parentEl.removeEventListener("click", stopClick)
+    } else //continue to allow clicks
+};
+// function flipCard(cardChosen) {
+//     if (cardChosen != pictures[0] + pictures[6])
+//     setAttribute
+// }
 
 // If cards match
 //     then they stay up
 //     else they flip over
+
 // $('.parent div img').on('click', function (evt){
 //     console.log(evt.target.id)
 //     // evt.target.currentSrc = "https://iili.io/HqziLFt.png"
