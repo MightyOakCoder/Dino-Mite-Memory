@@ -22,24 +22,27 @@ const pictures = [
     "https://iili.io/HqziQcX.png",
 ]
 
+let clickCount = 0;
 const pickedCardsArray = []
 const parentEl = document.querySelector(".parent")
 parentEl.addEventListener('click', function(evt) {
-    // console.log(evt.target.id)
-    // console.log(pictures[evt.target.id])
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
     pickedCardsArray.push([evt.target])
+    clickCount += 1;
+    console.log(clickCount);
     console.log(pickedCardsArray)
     if (pickedCardsArray.length === 2) {
         if(pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src){
             pickedCardsArray[0][0].setAttribute("src", cardBack)
-            pickedCardsArray[1][0].setAttribute("src", cardBack)
-        }
+            pickedCardsArray[1][0].setAttribute("src", cardBack) 
+        } 
+        {
+                setTimeout(pickedCardsArray[1][0], 1000)
+            }
     pickedCardsArray.length = 0
     }
 }) 
 console.log(pickedCardsArray)
-
 
 /*----- app's state (variables) -----*/
  
