@@ -22,13 +22,23 @@ const pictures = [
     "https://iili.io/HqziQcX.png",
 ]
 
-
+const pickedCardsArray = []
 const parentEl = document.querySelector(".parent")
 parentEl.addEventListener('click', function(evt) {
-    console.log(evt.target.id)
-    console.log(pictures[evt.target.id])
+    // console.log(evt.target.id)
+    // console.log(pictures[evt.target.id])
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
-})
+    pickedCardsArray.push([evt.target])
+    console.log(pickedCardsArray)
+    if (pickedCardsArray.length === 2) {
+        if(pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src){
+            pickedCardsArray[0][0].setAttribute("src", cardBack)
+            pickedCardsArray[1][0].setAttribute("src", cardBack)
+        }
+    pickedCardsArray.length = 0
+    }
+}) 
+console.log(pickedCardsArray)
 
 
 /*----- app's state (variables) -----*/
@@ -40,12 +50,12 @@ parentEl.addEventListener('click', function(evt) {
 
   /*----- functions -----*/
 //randomize the images
-window.onload = choosePic;
+// window.onload = choosePic;
 
-function choosePic() {
-    var randomNum = Math.floor(Math.random() * pictures.length);
-    $('.back').attr('src',pictures[randomNum]);
-}
+// function choosePic() {
+//     var randomNum = Math.floor(Math.random() * pictures.length);
+//     $('.back').attr('src',pictures[randomNum]);
+// }
 
 
 
@@ -69,19 +79,19 @@ document.getElementById("result").value.reset();} */}
 //     });
 
     
-  function checkIfMatching () {
-    if (selectedCard1 + selectedCard2) === pictures[0] && pictures[6] ||
-    (selectedCard1 + selectedCard2) === pictures[1] && pictures[7] ||
-    (selectedCard1 + selectedCard2) === pictures[2] && pictures[8] ||
-    (selectedCard1 + selectedCard2) === pictures[3] && pictures[9] ||
-    (selectedCard1 + selectedCard2) === pictures[4] && pictures[10] ||
-    (selectedCard1 + selectedCard2) === pictures[5] && pictures[11] ||
-    {
-        return true
-    } else {
-        return false
-    }
-}
+//   function checkIfMatching () {
+//     if (selectedCard1 + selectedCard2) === pictures[0] && pictures[6] ||
+//     (selectedCard1 + selectedCard2) === pictures[1] && pictures[7] ||
+//     (selectedCard1 + selectedCard2) === pictures[2] && pictures[8] ||
+//     (selectedCard1 + selectedCard2) === pictures[3] && pictures[9] ||
+//     (selectedCard1 + selectedCard2) === pictures[4] && pictures[10] ||
+//     (selectedCard1 + selectedCard2) === pictures[5] && pictures[11] ||
+//     {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
 // pictures[1] === pictures[7]
 // pictures[2] === pictures[8]
 // pictures[3] === pictures[9]
