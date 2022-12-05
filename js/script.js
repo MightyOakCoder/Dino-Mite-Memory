@@ -22,6 +22,7 @@ const pictures = [
     "https://iili.io/HqziQcX.png",
 ]
 
+
 const parentEl = document.querySelector(".parent")
 parentEl.addEventListener('click', function(evt) {
     console.log(evt.target.id)
@@ -29,6 +30,15 @@ parentEl.addEventListener('click', function(evt) {
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
 })
 
+
+/*----- app's state (variables) -----*/
+ 
+  /*----- cached element references -----*/
+
+  /*----- event listeners -----*/
+// document.querySelector('button').addEventListener('click', initialize);
+
+  /*----- functions -----*/
 //randomize the images
 window.onload = choosePic;
 
@@ -36,31 +46,57 @@ function choosePic() {
     var randomNum = Math.floor(Math.random() * pictures.length);
     $('.back').attr('src',pictures[randomNum]);
 }
-/*----- app's state (variables) -----*/
- 
-  /*----- cached element references -----*/
 
-  /*----- event listeners -----*/
+
+
+// function initialize() {
+//     board = [null, null, null, null, null, null, null, null, null];
+//     // OR initialize like this:
+//     // board = new Array(9).fill(null);
+//     turn = 1;
+//     winner = null;
+//     render();
+//   }
+
+{/* <input type="button" value="Reset" onclick="clear()">
+function clear(){
+document.getElementById("result").value.reset();} */}
   
-  /*----- functions -----*/
+  // $(document).ready(function(){
+//     $( '#dislink' ).click(function(){
+//     $("#db") .removeAttr('href');
+//     });
+//     });
+
+    
+  function checkIfMatching () {
+    if (selectedCard1 + selectedCard2) === pictures[0] && pictures[6] ||
+    (selectedCard1 + selectedCard2) === pictures[1] && pictures[7] ||
+    (selectedCard1 + selectedCard2) === pictures[2] && pictures[8] ||
+    (selectedCard1 + selectedCard2) === pictures[3] && pictures[9] ||
+    (selectedCard1 + selectedCard2) === pictures[4] && pictures[10] ||
+    (selectedCard1 + selectedCard2) === pictures[5] && pictures[11] ||
+    {
+        return true
+    } else {
+        return false
+    }
+}
+// pictures[1] === pictures[7]
+// pictures[2] === pictures[8]
+// pictures[3] === pictures[9]
+// pictures[4] === pictures[10]
+// pictures[5] === pictures[11]
+
+// const clickCounter = document.getElementById("clickme"),
+//   count = 0;
+// button.onclick = function() {
+//   count += 1;
+// };
 
 
 // const clicks = 0
 
-// function onClick() {
-//     clicks += 1;
-//     document.getElementById("clicks").pictures = clicks;
-// }
-// console.log(clicks)
-
-
-// var button = pictures,
-//   count = 0;
-// button.onclick = function() {
-//   count += 1;
-//   button.innerHTML = "Click me: " + count;
-// };
-// console.log(count)
 
 
 
@@ -88,7 +124,7 @@ function choosePic() {
 
 
 // const status = 
-    // const #card1 = $card1;
+//     const #card1 = $card1;
 // const .back = $imgBack
 // $(document).ready(function(){
 //     $imgBack.click(function(){
@@ -171,3 +207,17 @@ function choosePic() {
 //         "img": "https://iili.io/HqziQcX.png",
 //     },
 //     ];
+
+//     const checkIfMatching = pictures.some((picture) => picture.name === "bronto2");
+
+// $("parentEl").click(function(){
+//     var $click = $(this);
+//     var count =  $click.data("click_count") || 0) + 1;
+//     $click.data("click_count", count);
+//     if ( count == 1 )
+//     else if ( count == 2 )
+//     else {
+//     $click.unbind("click");
+//     }
+//     return false;
+//   });
