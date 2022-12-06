@@ -22,22 +22,25 @@ const pictures = [
     "https://iili.io/HqziQcX.png",
 ]
 
-let clickCount = 0;const pickedCardsArray = []
+let clickCount = 0;
+const pickedCardsArray = []
 const parentEl = document.querySelector(".parent")
-parentEl.addEventListener('click', function(evt) {
+parentEl.addEventListener('click', function (evt) {
     console.log(evt.target.id)
     console.log(pictures[evt.target.id])
     // console.log(evt.target.id)
     // console.log(pictures[evt.target.id])
+    clickCount++;
+    document.getElementById("count").innerText = clickCount;
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
     pickedCardsArray.push([evt.target])
-        console.log(pickedCardsArray)
+    console.log(pickedCardsArray)
     if (pickedCardsArray.length === 2) {
-        if(pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src){
+        if (pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src) {
             setTimeout(resetCards(), 1000)
         }
-       
-    pickedCardsArray.length = 0
+
+        pickedCardsArray.length = 0
     }
 })
 function resetCards() {
@@ -45,14 +48,11 @@ function resetCards() {
     pickedCardsArray[1][0].setAttribute("src", cardBack)
     console.log("dlkfsklf")
 }
+console.log(clickCount)
 console.log(pickedCardsArray)
 
 // push attribute clickCount to h3#count
-// let countEl = "0";
-let clickCount = 0;
-    clickCount += 1;
-console.log(clickCount)
-document.getElementById("count").innerText = clickCount;
+
 
 let matchEl = "0";
 document.getElementById("matches").innerText = matchEl;
