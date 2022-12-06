@@ -1,11 +1,5 @@
 console.log("connected!")//delete later
 
-/*----- constants -----*/
-// const lookup = {
-//     "1": "Player 1",
-//     "-1": "Player 2"
-//     "null": "Null"
-// };
 const cardBack = "https://iili.io/Hf4LFi7.png"
 const pictures = [
     "https://iili.io/HqziLFt.png", 
@@ -24,46 +18,50 @@ const pictures = [
 
 let clickCount = 0;
 const pickedCardsArray = []
+let matchCount = 0;
 const parentEl = document.querySelector(".parent")
-parentEl.addEventListener('click', function (evt) {
+parentEl.addEventListener('click', function(evt) {
     console.log(evt.target.id)
     console.log(pictures[evt.target.id])
     // console.log(evt.target.id)
     // console.log(pictures[evt.target.id])
-    clickCount++;
-    document.getElementById("count").innerText = clickCount;
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
     pickedCardsArray.push([evt.target])
     console.log(pickedCardsArray)
     if (pickedCardsArray.length === 2) {
-        if (pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src) {
-            setTimeout(resetCards(), 1000)
+        clickCount++;
+        document.getElementById("count").innerText = clickCount;
+        if(pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src){
+            setTimeout(function() {
+                pickedCardsArray[0][0].setAttribute("src", cardBack)
+                pickedCardsArray[1][0].setAttribute("src", cardBack)
+                pickedCardsArray.length = 0
+            }, 1000)
+         
+        } else {
+            matchCount++;
+            document.getElementById("matches").innerText = matchCount;
+            pickedCardsArray.length = 0
         }
-
-        pickedCardsArray.length = 0
+        // if(pickedCardsArray[0][0].src === pickedCardsArray[1][0].src){
+        //     matchesArray.push(pickedCardsArray.length)
+        //     console.log(matchesArray)
+        // }
     }
 })
-function resetCards() {
-    pickedCardsArray[0][0].setAttribute("src", cardBack)
-    pickedCardsArray[1][0].setAttribute("src", cardBack)
-    console.log("dlkfsklf")
-}
+
 console.log(clickCount)
-console.log(pickedCardsArray)
 
-// push attribute clickCount to h3#count
+document.getElementById("matches").innerText = matchesArray.length/2;
 
-
-let matchEl = "0";
-document.getElementById("matches").innerText = matchEl;
-
+function refresh(){
+    window.location.reload("Refresh")
+  }
 /*----- app's state (variables) -----*/
  
   /*----- cached element references -----*/
 
   /*----- event listeners -----*/
-// document.querySelector('button').addEventListener('click', initialize);
-
   /*----- functions -----*/
 //randomize the images
 // window.onload = choosePic;
@@ -110,9 +108,6 @@ document.getElementById("result").value.reset();} */}
 
 // const clicks = 0
 
-
-
-
 // const timesClicked = 0
 // function stopClick() {
 //     timesClicked++;
@@ -120,117 +115,3 @@ document.getElementById("result").value.reset();} */}
 //         parentEl.removeEventListener("click", stopClick)
 //     } else //continue to allow clicks
 // };
-
-// function flipCard(cardChosen) {
-//     if (cardChosen != pictures[0] + pictures[6])
-//     setAttribute
-// }
-
-// If cards match
-//     then they stay up
-//     else they flip over
-
-// $('.parent div img').on('click', function (evt){
-//     console.log(evt.target.id)
-//     // evt.target.currentSrc = "https://iili.io/HqziLFt.png"
-// });
-
-
-// const status = 
-//     const #card1 = $card1;
-// const .back = $imgBack
-// $(document).ready(function(){
-//     $imgBack.click(function(){
-//       $card1.toggle();
-//     });
-//   });
-  
-// $card1.fadeOut(function() {
-//   trigger: 'click'
-// });
-
-// $(document).ready(function(){
-//   $img.click(function(){
-//     $card1.toggle();
-//   });
-// });
-
-
-//What is said on screen when game is over
-// function render() {
-//     // board.forEach(function(sq, idx) {
-//     //     squares[idx].style.background = lookup[sq];
-//     //   });
-//       if (winner === 'T') {
-//       message.innerHTML = "It's a tie!";
-//     } else if (winner) {
-//       message.innerHTML = `Congrats ${lookup[winner].toUpperCase()}!`;
-//     } else {
-//       message.innerHTML = `Congrats ${lookup[turn].toUpperCase()}!`;
-//     }
-//   }
-
-// const pictures = [
-//     {
-//         "name": "triceratops1",
-//         "img": "https://iili.io/HqziLFt.png",
-//     },
-//     {
-//         "name": "triceratops2",
-//         "img": "https://iili.io/HqziLFt.png",
-//     },
-//     {
-//         "name": "yellowtrex1",
-//         "img": "https://iili.io/HqziPMN.png",
-//     },
-//     {
-//         "name": "yellowtrex2",
-//         "img": "https://iili.io/HqziPMN.png",
-//     },
-//     {
-//         "name": "stego1",
-//         "img": "https://iili.io/Hqzi6np.png",
-//     },
-//     {
-//         "name": "stego2",
-//         "img": "https://iili.io/Hqzi6np.png",
-//     },
-//     {
-//         "name": "purpletrex1",
-//         "img": "https://iili.io/HqzirtR.png", 
-//     },
-//     {
-//         "name": "purpletrex2",
-//         "img": "https://iili.io/HqzirtR.png", 
-//     },
-//     {
-//         "name": "ptero1",
-//         "img": "https://iili.io/HfspO8l.png", 
-//     },
-//     {
-//         "name": "ptero2",
-//         "img": "https://iili.io/HfspO8l.png", 
-//     },
-//     {
-//         "name": "bronto1",
-//         "img": "https://iili.io/HqziQcX.png",
-//     },
-//     {
-//         "name": "bronto2",
-//         "img": "https://iili.io/HqziQcX.png",
-//     },
-//     ];
-
-//     const checkIfMatching = pictures.some((picture) => picture.name === "bronto2");
-
-// $("parentEl").click(function(){
-//     var $click = $(this);
-//     var count =  $click.data("click_count") || 0) + 1;
-//     $click.data("click_count", count);
-//     if ( count == 1 )
-//     else if ( count == 2 )
-//     else {
-//     $click.unbind("click");
-//     }
-//     return false;
-//   });
