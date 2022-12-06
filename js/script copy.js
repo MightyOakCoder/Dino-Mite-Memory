@@ -22,40 +22,44 @@ const pictures = [
     "https://iili.io/HqziQcX.png",
 ]
 
-let clickCount = 0;const pickedCardsArray = []
+let clickCount = 0;
+const matchDisplay = document.querySelector("#matches")
+const pickedCards = []
+const pickedCardsArray = []
+const cardsWon = []
 const parentEl = document.querySelector(".parent")
+
 parentEl.addEventListener('click', function(evt) {
-    console.log(evt.target.id)
-    console.log(pictures[evt.target.id])
-    // console.log(evt.target.id)
-    // console.log(pictures[evt.target.id])
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
     pickedCardsArray.push([evt.target])
-        console.log(pickedCardsArray)
-    if (pickedCardsArray.length === 2) {
-        if(pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src){
-            setTimeout(resetCards(), 1000)
-        }
-       
-    pickedCardsArray.length = 0
-    }
-})
-function resetCards() {
-    pickedCardsArray[0][0].setAttribute("src", cardBack)
-    pickedCardsArray[1][0].setAttribute("src", cardBack)
-    console.log("dlkfsklf")
-}
-console.log(pickedCardsArray)
-
-// push attribute clickCount to h3#count
-// let countEl = "0";
-let clickCount = 0;
     clickCount += 1;
-console.log(clickCount)
-document.getElementById("count").innerText = clickCount;
+    console.log(clickCount);
+    console.log(pickedCardsArray)
+    if (pickedCardsArray.length === 2) {
+        setTimeout(checkforMatch, 500)
+    }
+}) 
 
-let matchEl = "0";
-document.getElementById("matches").innerText = matchEl;
+function checkforMatch () {
+    const optionOneId = pickedCardsArray[0]
+    const optionTwoId = pickedCardsArray[1]
+    if (pickedCardsArray[0].src === pickedCardsArray[1].src) {
+        alert("You found a match!")
+        cardsWon.push(pickedCards)
+    } else {
+        (pickedCardsArray[0].src !== pickedCardsArray[1].src)
+        cards[optionOneId].setAttribute("src", cardBack)
+        cards[optionTwoId].setAttribute("src", cardBack)
+        alert("Sorry, try again!")
+    }
+    pickedCards = []
+    pickedCardsArray = []
+    matchDisplay.textContent = cardsWon.length
+    if (cardsWon.length === pickedCards.length/2) {
+        matchDisplay.textContent = "You Won!"
+    }
+}
+// push attribute clickCount to h3#count
 
 /*----- app's state (variables) -----*/
  
@@ -69,12 +73,6 @@ document.getElementById("matches").innerText = matchEl;
 // window.onload = choosePic;
 
 // function choosePic() {
-    // window.onload = choosePic;
-        function choosePic() {
-        var randomNum = Math.floor(Math.random() * pictures.length);
-        $('.back').attr('src',pictures[randomNum]);
-    }
-
 //     var randomNum = Math.floor(Math.random() * pictures.length);
 //     $('.back').attr('src',pictures[randomNum]);
 // }
@@ -101,6 +99,25 @@ document.getElementById("result").value.reset();} */}
 //     });
 
     
+//   function checkIfMatching () {
+//     if (selectedCard1 + selectedCard2) === pictures[0] && pictures[6] ||
+//     (selectedCard1 + selectedCard2) === pictures[1] && pictures[7] ||
+//     (selectedCard1 + selectedCard2) === pictures[2] && pictures[8] ||
+//     (selectedCard1 + selectedCard2) === pictures[3] && pictures[9] ||
+//     (selectedCard1 + selectedCard2) === pictures[4] && pictures[10] ||
+//     (selectedCard1 + selectedCard2) === pictures[5] && pictures[11] ||
+//     {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// pictures[1] === pictures[7]
+// pictures[2] === pictures[8]
+// pictures[3] === pictures[9]
+// pictures[4] === pictures[10]
+// pictures[5] === pictures[11]
+
 // const clickCounter = document.getElementById("clickme"),
 //   count = 0;
 // button.onclick = function() {

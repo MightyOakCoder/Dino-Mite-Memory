@@ -15,19 +15,22 @@ h1 {
 .back {
     border: 2px solid #c3c3c3;
     display: grid;
-    justify-content: center align-items: center
+    justify-content: center; 
+    align-items: center
 }
 
 #count {
     display: grid;
-    justify-content: center
+    justify-content: center;
     text-align: center;
     font-size: 24px;
 }
 
 #matches {
     display: grid;
-    justify-content: center align-items: center text-align: center;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
     font-size: 24px;
 }
 
