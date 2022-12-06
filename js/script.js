@@ -8,26 +8,23 @@ const pictures = [
     "https://iili.io/HqzirtR.png", 
     "https://iili.io/HfspO8l.png", 
     "https://iili.io/HqziQcX.png",
-    "https://iili.io/HqziLFt.png", 
-    "https://iili.io/HqziPMN.png",
-    "https://iili.io/Hqzi6np.png", 
-    "https://iili.io/HqzirtR.png", 
+    
     "https://iili.io/HfspO8l.png", 
+    "https://iili.io/Hqzi6np.png", 
+    "https://iili.io/HqziPMN.png",
+    "https://iili.io/HqzirtR.png", 
     "https://iili.io/HqziQcX.png",
+    "https://iili.io/HqziLFt.png", 
+   
 ]
 
 let clickCount = 0;
-const pickedCardsArray = []
 let matchCount = 0;
+const pickedCardsArray = []
 const parentEl = document.querySelector(".parent")
-parentEl.addEventListener('click', function(evt) {
-    console.log(evt.target.id)
-    console.log(pictures[evt.target.id])
-    // console.log(evt.target.id)
-    // console.log(pictures[evt.target.id])
+parentEl.addEventListener("click", function(evt) {
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
     pickedCardsArray.push([evt.target])
-    console.log(pickedCardsArray)
     if (pickedCardsArray.length === 2) {
         clickCount++;
         document.getElementById("count").innerText = clickCount;
@@ -37,41 +34,40 @@ parentEl.addEventListener('click', function(evt) {
                 pickedCardsArray[1][0].setAttribute("src", cardBack)
                 pickedCardsArray.length = 0
             }, 1000)
-         
-        } else {
+                } else {
             matchCount++;
             document.getElementById("matches").innerText = matchCount;
             pickedCardsArray.length = 0
         }
-        // if(pickedCardsArray[0][0].src === pickedCardsArray[1][0].src){
-        //     matchesArray.push(pickedCardsArray.length)
-        //     console.log(matchesArray)
-        // }
     }
 })
 
-console.log(clickCount)
+if (clickCount === 10) {
+    if (matchCount === 6) {
+        document.getElementById("win").innerText = "YOU WIN!!"
+    } else {
+        document.getElementById("win").innerText = "SORRY, TRY AGAIN!"
+    }
+}
+if (clickCount()) {}
+/*----- app's state (variables) -----*/
 
-document.getElementById("matches").innerText = matchesArray.length/2;
+/*----- cached element references -----*/
 
+/*----- event listeners -----*/
+/*----- functions -----*/
 function refresh(){
     window.location.reload("Refresh")
   }
-/*----- app's state (variables) -----*/
- 
-  /*----- cached element references -----*/
-
-  /*----- event listeners -----*/
-  /*----- functions -----*/
 //randomize the images
 // window.onload = choosePic;
 
 // function choosePic() {
     // window.onload = choosePic;
-        function choosePic() {
-        var randomNum = Math.floor(Math.random() * pictures.length);
-        $('.back').attr('src',pictures[randomNum]);
-    }
+    //     function choosePic() {
+    //     var randomNum = Math.floor(Math.random() * pictures.length);
+    //     $('.back').attr('src',pictures[randomNum]);
+    // }
 
 //     var randomNum = Math.floor(Math.random() * pictures.length);
 //     $('.back').attr('src',pictures[randomNum]);
