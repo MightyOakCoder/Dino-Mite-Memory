@@ -22,27 +22,39 @@ const pictures = [
     "https://iili.io/HqziQcX.png",
 ]
 
-let clickCount = 0;
+const matchDisplay = document.querySelector("#matches")
+const pickedCards = []
 const pickedCardsArray = []
+const cardsWon = []
 const parentEl = document.querySelector(".parent")
+
 parentEl.addEventListener('click', function(evt) {
     evt.target.setAttribute("src", `${pictures[evt.target.id]}`)
     pickedCardsArray.push([evt.target])
-    clickCount += 1;
-    console.log(clickCount);
     console.log(pickedCardsArray)
     if (pickedCardsArray.length === 2) {
-        if(pickedCardsArray[0][0].src !== pickedCardsArray[1][0].src){
-            pickedCardsArray[0][0].setAttribute("src", cardBack)
-            pickedCardsArray[1][0].setAttribute("src", cardBack) 
-        } 
-        {
-                setTimeout(pickedCardsArray[1][0], 1000)
-            }
-    pickedCardsArray.length = 0
+        setTimeout(checkforMatch, 500)
     }
 }) 
-console.log(pickedCardsArray)
+
+function checkforMatch () {
+    const optionOneId = pickedCardsArray[0]
+    const optionTwoId = pickedCardsArray[1]
+    if (pickedCardsArray[0].src === pickedCardsArray[1].src) {
+        alert("You found a match!")
+        cardsWon.push(pickedCards)
+    } else {
+        cards[optionOneId].setAttribute("src", cardBack)
+        cards[optionTwoId].setAttribute("src", cardBack)
+        alert("Sorry, try again!")
+    }
+    pickedCards = []
+    pickedCardsArray = []
+    matchDisplay.textContent = cardsWon.length
+    if (cardsWon.length === pickedCards.length/2) {
+        matchDisplay.textContent = "You Won!"
+    }
+}
 
 /*----- app's state (variables) -----*/
  
