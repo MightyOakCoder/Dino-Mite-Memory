@@ -1,6 +1,6 @@
 console.log("connected!")//delete later
 
-const cardBack = "https://iili.io/Hf4LFi7.png"
+const cardBack = "https://iili.io/HCLFZTx.png"
 const pictures = [
     "https://iili.io/HqziLFt.png", 
     "https://iili.io/HqziPMN.png",
@@ -8,7 +8,6 @@ const pictures = [
     "https://iili.io/HqzirtR.png", 
     "https://iili.io/HfspO8l.png", 
     "https://iili.io/HqziQcX.png",
-    
     "https://iili.io/HfspO8l.png", 
     "https://iili.io/Hqzi6np.png", 
     "https://iili.io/HqziPMN.png",
@@ -49,7 +48,6 @@ if (clickCount === 10) {
         document.getElementById("win").innerText = "SORRY, TRY AGAIN!"
     }
 }
-if (clickCount()) {}
 /*----- app's state (variables) -----*/
 
 /*----- cached element references -----*/
