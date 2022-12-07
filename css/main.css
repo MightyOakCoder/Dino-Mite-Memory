@@ -98,6 +98,8 @@ h2 {
     justify-content: center; 
     align-items: center; 
     text-align: center;
+    font-size: 36px;
+    font-weight: 100;
 }
 
 #new-game {
@@ -107,20 +109,6 @@ h2 {
     align-items: center; 
     text-align: center;
 }
-
-/* #attributes {
-    box-sizing: border-box;
-    display: inline-block;
-    margin: 5px;
-    cursor: pointer;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
-}  */
 
 .attributes {
     box-sizing: content-box;

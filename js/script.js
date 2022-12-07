@@ -38,11 +38,11 @@ parentEl.addEventListener("click", function(evt) {
             document.getElementById("matches").innerText = matchCount;
             pickedCardsArray.length = 0
         }
-        if (clickCount < 10) {
-            if (matchCount === 6) {
-                document.getElementById("win").innerText = "YOU WIN!!";
+        if (matchCount === 6) {
+            if (clickCount <= 10) {
+                document.getElementById("win").innerHTML = "YOU WIN!!";
             } else {
-                document.getElementById("win").innerText = "SORRY, TRY AGAIN!";
+                document.getElementById("win").innerHTML = "SORRY, TRY AGAIN!";
             }
         }
     }
