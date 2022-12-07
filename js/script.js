@@ -38,16 +38,17 @@ parentEl.addEventListener("click", function(evt) {
             document.getElementById("matches").innerText = matchCount;
             pickedCardsArray.length = 0
         }
+        if (clickCount < 10) {
+            if (matchCount === 6) {
+                document.getElementById("win").innerText = "YOU WIN!!";
+            } else {
+                document.getElementById("win").innerText = "SORRY, TRY AGAIN!";
+            }
+        }
     }
 })
 
-if (clickCount === 10) {
-    if (matchCount === 6) {
-        document.getElementById("win").innerText = "YOU WIN!!"
-    } else {
-        document.getElementById("win").innerText = "SORRY, TRY AGAIN!"
-    }
-}
+
 /*----- app's state (variables) -----*/
 
 /*----- cached element references -----*/
@@ -57,55 +58,3 @@ if (clickCount === 10) {
 function refresh(){
     window.location.reload("Refresh")
   }
-//randomize the images
-// window.onload = choosePic;
-
-// function choosePic() {
-    // window.onload = choosePic;
-    //     function choosePic() {
-    //     var randomNum = Math.floor(Math.random() * pictures.length);
-    //     $('.back').attr('src',pictures[randomNum]);
-    // }
-
-//     var randomNum = Math.floor(Math.random() * pictures.length);
-//     $('.back').attr('src',pictures[randomNum]);
-// }
-
-
-
-// function initialize() {
-//     board = [null, null, null, null, null, null, null, null, null];
-//     // OR initialize like this:
-//     // board = new Array(9).fill(null);
-//     turn = 1;
-//     winner = null;
-//     render();
-//   }
-
-{/* <input type="button" value="Reset" onclick="clear()">
-function clear(){
-document.getElementById("result").value.reset();} */}
-  
-  // $(document).ready(function(){
-//     $( '#dislink' ).click(function(){
-//     $("#db") .removeAttr('href');
-//     });
-//     });
-
-    
-// const clickCounter = document.getElementById("clickme"),
-//   count = 0;
-// button.onclick = function() {
-//   count += 1;
-// };
-
-
-// const clicks = 0
-
-// const timesClicked = 0
-// function stopClick() {
-//     timesClicked++;
-//     if (timesClicked > 2) {
-//         parentEl.removeEventListener("click", stopClick)
-//     } else //continue to allow clicks
-// };
