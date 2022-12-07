@@ -12,6 +12,7 @@ h2 {
     text-align: center;
     margin-top: 2px;
 }
+
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -23,7 +24,7 @@ h2 {
 .back {
     border: 2px solid #c3c3c3;
     display: grid;
-    justify-content: center; 
+    justify-content: center;
     align-items: center
 }
 
@@ -80,14 +81,15 @@ h2 {
     display: grid;
     justify-content: center;
     text-align: center;
-    font-size: 30px;;
+    font-size: 30px;
+    ;
 }
 
 #matches {
     grid-area: 2 / 4 / 3 / 5;
     display: grid;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 30px;
 }
@@ -95,8 +97,8 @@ h2 {
 #win {
     grid-area: 2 / 4 / 3 / 5;
     display: grid;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
     font-size: 36px;
     font-weight: 100;
@@ -105,8 +107,8 @@ h2 {
 #new-game {
     grid-area: 3 / 4 / 4 / 5;
     display: grid;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
 
@@ -126,3 +128,13 @@ button {
     border-radius: 1px;
     font-size: 20px;
 }
+input[type=submit] {
+    padding: 5px 15px;
+    background: #136a31;
+    color: white;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
