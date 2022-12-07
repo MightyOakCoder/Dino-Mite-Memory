@@ -1,6 +1,9 @@
 # DINO-MITE MEMORY  
-## find the dinos and win!
-![Logo](https://iili.io/HCm0SKx.png)
+### FIND THE DINOS AND WIN!
+![HCmGPNS.png](https://iili.io/HCmGPNS.png)
+
+In this first project for the GA SEI course, I've chosen Memory, aka Concentration. This is a card game in which all of the cards are laid face down and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
+
 ## List of Technologies Used:
 - HTML
 - CSS
@@ -10,12 +13,9 @@
 ## Wireframe
 https://www.figma.com/community/file/1182075554291730122
 
-## Access
+## Getting Started
 Access at: link
-
-## Unsolved Problems: 
-- Currently if I click outside of the game board, it also registers clicks
-- Stying-wise I'd like to center the Count and Matches sections, as well as stylize the New Game button
+- Note: If you do not have a match, wait for the board to reset before trying another set of cards
 
 ## MVP Goals:
 - There are 12 cards displayed face down
@@ -31,6 +31,10 @@ Access at: link
   otherwise it is a loss
 - A New Game button is displayed to start a new game
 
-## Future:
+## Unsolved Problems: 
+- Currently if I click outside of the game board, it also registers clicks
+- Randomize the face of the cards on refresh 
+
+## Icebox (Planned Future Enhancements):
 - Adding @media CSS so it looks clean on both mobile and desktop
 - Disabling clicks after 10 clicks

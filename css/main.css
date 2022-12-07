@@ -1,6 +1,7 @@
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 20px;
+    background-color: rgb(224, 234, 230);
 }
 
 h1 {
@@ -22,7 +23,7 @@ h2 {
 }
 
 .back {
-    border: 2px solid #c3c3c3;
+    border: 2px solid #837e7e;
     display: grid;
     justify-content: center;
     align-items: center
@@ -117,7 +118,7 @@ h2 {
     display: inline-block;
     margin: 5px;
     cursor: pointer;
-    box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75);
+    /* box-shadow: 2px 2px 3px 0 rgba(41, 41, 41, 0.75); */
 }
 
 button {
@@ -128,6 +129,7 @@ button {
     border-radius: 1px;
     font-size: 20px;
 }
+
 input[type=submit] {
     padding: 5px 15px;
     background: #136a31;
@@ -137,4 +139,4 @@ input[type=submit] {
     -webkit-border-radius: 5px;
     border-radius: 5px;
     font-size: 16px;
-  }
+}
