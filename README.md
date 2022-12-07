@@ -1,6 +1,6 @@
 # DINO-MITE MEMORY  
 ## find the dinos and win!
-
+![Logo](https://iili.io/HCm0SKx.png)
 ## List of Technologies Used:
 - HTML
 - CSS
