@@ -1,6 +1,6 @@
 # DINO-MITE MEMORY  
 ### FIND THE DINOS AND WIN!
-![HCmGPNS.png](https://iili.io/HCmGPNS.png)
+![HCyFE3x.png](https://iili.io/HCyFE3x.png)
 
 In this first project for the GA SEI course, I've chosen Memory, aka Concentration. This is a card game in which all of the cards are laid face down and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
 
@@ -14,13 +14,14 @@ In this first project for the GA SEI course, I've chosen Memory, aka Concentrati
 https://www.figma.com/community/file/1182075554291730122
 
 ## Getting Started
-Access at: link
+Access at: https://beckyweeks14.github.io/Memory/
 - Note: If you do not have a match, wait for the board to reset before trying another set of cards
 
+## Win/Loss Screenshots:
+![HCyKTPa.png](https://iili.io/HCyKTPa.png) ![HCyqHrb.png](https://iili.io/HCyqHrb.png)
 ## MVP Goals:
 - There are 12 cards displayed face down
 - There are 6 different pairs of matching cards
-- Cards are displayed at random
 - When a card selected it will “flip over” to the face of the card
 - 2 cards can be selected at a time
 - Determine if the 2 selected cards are a match
