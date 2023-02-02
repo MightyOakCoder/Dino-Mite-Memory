@@ -14,7 +14,7 @@ In this first project for the GA SEI course, I've chosen Memory, aka Concentrati
 https://www.figma.com/community/file/1182075554291730122
 
 ## Getting Started
-Access at: https://beckyweeks14.github.io/Memory/
+Access at: https://beckyweeks14.github.io/Dino-Mite-Memory/
 - Note: If you do not have a match, wait for the board to reset before trying another set of cards
 
 ## Win/Loss Screenshots:
