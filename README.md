@@ -8,7 +8,7 @@ In this first project for the GA SEI course, I've chosen Memory, aka Concentrati
 - HTML
 - CSS
 - JavaScript
-- Canva
+- Canva 
 
 ## Wireframe
 https://www.figma.com/community/file/1182075554291730122
