@@ -99,7 +99,8 @@ input[type=submit] {
     border: 2px solid #837e7e;
     display: grid;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    border-radius: 6%;
 }
 
 #card1 {
